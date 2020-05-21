@@ -26,5 +26,6 @@ stages:
         containerRegistry: 'DockerMavselsDev'
         repository: 'mavselsdev/devopswebapinetcore31'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: '$(System.DefaultWorkingDirectory)/Dockerfile'
+        buildContext: '$(System.DefaultWorkingDirectory)'
         tags: '$(tag)'
